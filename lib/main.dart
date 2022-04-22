@@ -30,19 +30,25 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {   
 
     return MaterialApp(
+      
         theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Column(
-        children: [
-          XylophoneKey(cores[0],1),
-          XylophoneKey(cores[1],2),
-          XylophoneKey(cores[2],3),
-          XylophoneKey(cores[3],4),
-          XylophoneKey(cores[4],5),
-          XylophoneKey(cores[5],6),
-          XylophoneKey(cores[6],7)
-        ],
+      home: Scaffold(
+        appBar: AppBar(
+          title: Center(child: const Text("Xilofone")),
+        ),
+        body: Column(
+          children: [
+            XylophoneKey(cores[0],1),
+            XylophoneKey(cores[1],2),
+            XylophoneKey(cores[2],3),
+            XylophoneKey(cores[3],4),
+            XylophoneKey(cores[4],5),
+            XylophoneKey(cores[5],6),
+            XylophoneKey(cores[6],7)
+          ],
+        ),
       )
     );
   }
